@@ -1,44 +1,34 @@
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, :autofocused => true, :class => 'form-control', :id => 'expand-form' %>
 
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, :class => 'form-control', :id => 'expand-form' %>
+    <div class='col-xs-6'>
 
-    <%= f.label :email %>
-    <%= f.text_field :email, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :first_name, :autofocused => true, :class => 'form-control', :placeholder => "First Name"  %>
 
-    <%= f.label "Home Number" %>
-    <%= f.text_field :home_number, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :last_name, :class => 'form-control', :placeholder => "Last Name"  %>
 
-    <%= f.label "Mobile Phone" %>
-    <%= f.text_field :mobile_phone, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :email, :class => 'form-control', :placeholder => "Email"  %>
 
-    <%= f.label "Fax Number" %>
-    <%= f.text_field :fax_number, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :home_number, :class => 'form-control', :placeholder => "Home Number"  %>
 
-    <%= f.label "Street Address" %>
-    <%= f.text_field :street, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :mobile_phone, :class => 'form-control', :placeholder => "Mobile Number"  %>
 
-    <%= f.label "State" %>
-    <%= f.text_field :state, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :fax_number, :class => 'form-control', :placeholder => "Fax Number"  %>
 
-    <%= f.label "Zip" %>
-    <%= f.text_field :zip, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :street, :class => 'form-control', :placeholder => "Street Address"  %>
 
-    <%= f.label :nationaity %>
-    <%= f.text_field :nationality, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :state, :class => 'form-control', :placeholder => "State"  %>
 
-    <%= f.label "Languages Spoken" %>
-    <%= f.text_field :languages, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :zip, :class => 'form-control', :placeholder => "Zip Code"  %>
+    </div>
+    <div class='col-xs-6'>
+    <%= f.text_field :nationality, :class => 'form-control', :placeholder => "Nationality"  %>
 
-    <%= f.label "Years in US" %>
-    <%= f.text_field :years, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_field :languages, :class => 'form-control', :placeholder => "Languages Spoken"  %>
 
-    <%= f.label :notes %>
-    <%= f.text_area :notes, :class => 'form-control', :id => 'expand-form', :required => false %>
+    <%= f.text_field :years, :class => 'form-control', :placeholder => "Years in US"  %>
 
-    <%= f.label "HHA Number" %>
-    <%= f.text_field :hha, :class => 'form-control', :id => 'expand-form' %>
+    <%= f.text_area :notes, :class => 'form-control', :required => false, :placeholder => "Notes/Comments" %>
+
+    <%= f.text_field :hha, :class => 'form-control', :placeholder => "HHA Number"  %>
 
     <%= f.label "English (1 = bad, 9 = fluent)"%>
     <%= f.select :english, 1..9%> <br />
@@ -48,5 +38,6 @@
 
     <%= f.label "Has Driver License?" %>
     <%= f.check_box :driver_license, {}, true,false %> <br />
+    </div>
 
 

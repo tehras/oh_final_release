@@ -4,6 +4,7 @@
   <%= render :partial => 'caretakers/newct', :controller => @caretake %>
   <%= render :partial => 'caretakers/updatect', :controller => @caretake %>
   </div>
+
 <h3 style="text-align: left; font-weight:bold">Client Options:</h3>
   <div class = "render-style">
   <%= render :partial => 'clients/newcl', :controller => @client %>
@@ -15,7 +16,12 @@
 <script>
     $(".expanderContent").hide();
     $(".expanderSign").on('click', function () {
-        $(this).text($(this).text() == '[+]' ? '[-]' : '[+]');
+        var myClass = $(this).children('i').attr("class");
+        if (myClass == "icon-plus-sign")
+            $(this).children('i').removeClass("icon-plus-sign").addClass("icon-minus-sign");
+        else
+            $(this).children('i').removeClass("icon-minus-sign").addClass("icon-plus-sign");
+//        $(this).text($(this).text() == '[+]' ? '[-]' : '[+]');
         $(this).parent().next("div").toggle('slow');
     });
 </script>

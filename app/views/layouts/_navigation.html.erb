@@ -12,14 +12,14 @@
         <!--<li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>-->
         <% if current_page? (root_path) %>
         <li><%= link_to "Home", '#home',:title=>'Home Page', :class => 'scroll brand-1' %></li>
-        <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Features</a></li>
+        <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Mission</a></li>
         <li><a title="Themes assets" href="#assets" class="scroll brand-3">Assets</a></li>
         <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
         <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
 
         <% else %>
         <li><%= link_to "Home", root_path + '#home',:title=>'Home Page', :class => 'scroll brand-1' %></li>
-        <li><%= link_to "Features", root_path + '#features',:title=>'Features', :class => 'scroll brand-4' %></li>
+        <li><%= link_to "Mission", root_path + '#features',:title=>'Features', :class => 'scroll brand-4' %></li>
         <li><%= link_to "Assets", root_path + '#fassets',:title=>'Themes assets', :class => 'scroll brand-3' %></li>
         <li><%= link_to "About Us", root_path + '#about',:title=>'Who we are', :class => 'scroll fedato brand-4' %></li>
         <li><%= link_to "Contact", root_path + '#contact',:title=>'Get in touch!', :class => 'scroll brand-2' %></li>
@@ -28,9 +28,7 @@
         <% if user_signed_in? %>
             <li style="height: 47px" class="hoverli"  >
 
-              <% User.all.map.each do |user| %>
-              <a class="scroll brand-4" data-toggle="dropdown" href="#"><%= "#{user.name.capitalize}" %></a>
-              <% end %>
+              <a class="scroll brand-4" data-toggle="dropdown" href="#"><%= "#{current_user.name}" %></a>
 
               <ul class="dropdown-menu navbar-inverse file_menu" role="menu">
                 <li class="scroll brand-4">
