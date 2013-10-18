@@ -28,7 +28,7 @@
         <% if user_signed_in? %>
             <li style="height: 47px" class="hoverli"  >
 
-              <a class="scroll brand-4" data-toggle="dropdown" href="#"><%= "#{current_user.name}" %></a>
+              <a class="scroll brand-4 dropdown-toggle" data-toggle="dropdown" href="#"><%= "#{current_user.name}" %> <b class="caret"></b></a>
 
               <ul class="dropdown-menu navbar-inverse file_menu" role="menu">
                 <li class="scroll brand-4">
