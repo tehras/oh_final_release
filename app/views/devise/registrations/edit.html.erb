@@ -29,4 +29,15 @@
 </div>
 
 <!-- expand and collaps -->
-
+<script>
+    $(".expanderContent").hide();
+    $(".expanderSign").on('click', function () {
+        var myClass = $(this).children('i').attr("class");
+        if (myClass == "icon-plus-sign")
+            $(this).children('i').removeClass("icon-plus-sign").addClass("icon-minus-sign");
+        else
+            $(this).children('i').removeClass("icon-minus-sign").addClass("icon-plus-sign");
+//        $(this).text($(this).text() == '[+]' ? '[-]' : '[+]');
+        $(this).parent().next("div").toggle('slow');
+    });
+</script>
